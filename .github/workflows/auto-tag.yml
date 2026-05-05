@@ -19,7 +19,7 @@ jobs:
         run: |
           git fetch --tags
           # Pega a última tag ou inicia v0.0.0 
-          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "0.0.0")
           echo "LATEST_TAG=$LATEST_TAG" >> $GITHUB_ENV
       - name: Calcular e Criar Nova Tag
         run: |
